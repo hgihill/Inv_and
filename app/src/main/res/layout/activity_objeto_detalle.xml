@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    tools:context=".Objeto_detalle">
+
+    <TextView
+        android:id="@+id/lblNombreObj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lateralGeneral"
+        android:layout_marginTop="@dimen/dimen30"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/nombre"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/lblCantObj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lateralGeneral"
+        android:layout_marginTop="@dimen/dimen40"
+        android:fontFamily="@font/croissant_one"
+        android:includeFontPadding="false"
+        android:text="@string/cantidad"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreObj" />
+
+    <TextView
+        android:id="@+id/lblMinObj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="@dimen/dimen40"
+        android:fontFamily="@font/croissant_one"
+        android:text="Minimo:"
+        android:textSize="13dp"
+        app:layout_constraintStart_toEndOf="@+id/lblCantObj"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreObj" />
+
+    <TextView
+        android:id="@+id/lblConsObj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lateralGeneral"
+        android:layout_marginTop="@dimen/dimen40"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/consumible"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMinObj"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreObj" />
+
+    <TextView
+        android:id="@+id/lblDescObj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lateralGeneral"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/desc"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblConsObj" />
+
+    <TextView
+        android:id="@+id/lblLocObj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lateralGeneral"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/loc"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescObj" />
+
+    <EditText
+        android:id="@+id/txtNombreObj"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_marginEnd="@dimen/lateralGeneral"
+        android:ems="10"
+        android:enabled="true"
+        android:fontFamily="@font/croissant_one"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/txtCantObj"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/lateralGeneral"
+        android:layout_marginTop="@dimen/dimen10"
+        android:ems="10"
+        android:enabled="true"
+        android:fontFamily="@font/croissant_one"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCantObj" />
+
+    <EditText
+        android:id="@+id/txtMinObj"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/alturaAmpliada"
+        android:layout_marginTop="@dimen/dimen10"
+        android:ems="10"
+        android:enabled="true"
+        android:fontFamily="@font/croissant_one"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/txtCantObj"
+        app:layout_constraintTop_toBottomOf="@+id/lblMinObj" />
+
+    <Switch
+        android:id="@+id/switchConsumible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alturaAmpliada"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_marginEnd="@dimen/lateralAmpliado"
+        android:enabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtMinObj"
+        app:layout_constraintTop_toBottomOf="@+id/lblConsObj" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/alturaGeneral"
+        android:fontFamily="@font/croissant_one"
+        android:text="Detalle"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtLocObj"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/lateralAmpliado"
+        android:ems="10"
+        android:enabled="true"
+        android:fontFamily="@font/croissant_one"
+        android:gravity="center|top"
+        android:inputType="textMultiLine"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/lblLocObj"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescObj" />
+
+    <EditText
+        android:id="@+id/txtDescObj"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="@dimen/lateralAmpliado"
+        android:ems="10"
+        android:enabled="true"
+        android:fontFamily="@font/croissant_one"
+        android:gravity="center|top"
+        android:inputType="textMultiLine"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/lblDescObj"
+        app:layout_constraintTop_toBottomOf="@+id/switchConsumible" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen50"
+        android:layout_marginTop="@dimen/dimen30"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/guardar"
+        app:layout_constraintEnd_toStartOf="@+id/btnBorrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocObj" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alturaAmpliada"
+        android:layout_marginTop="@dimen/dimen30"
+        android:layout_marginEnd="@dimen/dimen50"
+        android:fontFamily="@font/croissant_one"
+        android:text="@string/borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardar"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocObj" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <PreferenceCategory app:title="@string/credenciales">
+            <EditTextPreference
+                app:key="user"
+                app:title="@string/usuario" />
+
+            <EditTextPreference
+                app:key="pass"
+                app:title="@string/pass" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory app:title="@string/sonido">
+            <SwitchPreference
+                app:defaultValue="true"
+                app:key="vol"
+                app:title="@string/volumen" />
+
+            <SwitchPreference
+                app:defaultValue="true"
+                app:dependency="vol"
+                app:key="vol_error"
+                app:title="@string/vol_fallo" />
+
+            <SwitchPreference
+                app:defaultValue="true"
+                app:dependency="vol"
+                app:key="vol_boton"
+                app:title="@string/boton" />
+
+        </PreferenceCategory>
+
+    </PreferenceScreen>

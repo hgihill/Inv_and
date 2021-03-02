@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inventory</string>
+    <string name="registrarse">Sign in</string>
+    <string name="loguearse">Log In</string>
+    <string name="usuario">User:</string>
+    <string name="pass">Password:</string>
+    <string name="buscador">Object finder</string>
+    <string name="vivienda">House</string>
+    <string name="habitación">Room</string>
+    <string name="siguiente">Next</string>
+    <string name="nombre">Name:</string>
+    <string name="cantidad">Quantity:</string>
+    <string name="minimo">Minimun:</string>
+    <string name="consumible">Consumable:</string>
+    <string name="desc">Description:</string>
+    <string name="loc">Location:</string>
+    <string name="espacio">Space</string>
+    <string name="guardar">Save</string>
+    <string name="borrar">Delete</string>
+    <string name="toast_campos_registro">Fill both fields to sign in</string>
+    <string name="toast_usuario_correcto">Wright user</string>
+    <string name="toast_usuario_incorrecto">Wrong user</string>
+    <string name="toast_usuario_existente">User already exists</string>
+    <string name="toast_usuario_registrado">User registered</string>
+    <string name="eliminar_objeto">Delete object</string>
+    <string name="confirmar_borrar">Do you really want to delete this object?</string>
+    <string name="confirmar">Confirm</string>
+    <string name="cancelar">Cancel</string>
+    <string name="toast_info_actulizada">Información actulizada</string>
+    <string name="toast_problema">Oops, something went wrong</string>
+    <string name="toast_objeto_borrado">Objetc deleted</string>
+    <string name="toast_no_objetos_asociados">This space has no objects associated</string>
+    <string name="toast_hab_no_asociadas">This house has no rooms associated</string>
+    <string name="toast_espacio_no_asociado">This room has no spaces associated</string>
+    <string name="toast_relleno_log">Fill both fields to log in</string>
+    <string name="credenciales">Credentials</string>
+    <string name="sonido">Sound</string>
+    <string name="volumen">Volume</string>
+    <string name="vol_fallo">Error volume</string>
+    <string name="boton">Button</string>
+</resources>
