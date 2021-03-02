@@ -38,6 +38,7 @@ public class Seleccion_objeto extends AppCompatActivity {
     public static Spinner spinEspacio;
     public static Button btnSiguiente;
     public static Context context;
+    public static String hola;
     public static List<Vivienda> lstViviendas = new ArrayList<>();
     public static List<String> nombreViviendas = new ArrayList<>();
     public static List<Habitacion> lstHabitaciones = new ArrayList<>();
