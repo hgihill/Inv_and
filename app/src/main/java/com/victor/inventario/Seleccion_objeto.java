@@ -60,59 +60,63 @@ public class Seleccion_objeto extends AppCompatActivity {
 
         final MediaPlayer sonidoBoton = MediaPlayer.create(this, R.raw.boton);
 
-        for(Vivienda v : lstViviendas){
-            nombreViviendas.add(v.getNOMBRE());
+        if(lstViviendas != null) {
+            for (Vivienda v : lstViviendas) {
+                nombreViviendas.add(v.getNOMBRE());
+            }
+
+            spinVivienda.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, nombreViviendas));
+
+            spinVivienda.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    LogicSeleccion.habitaciones(spinVivienda.getSelectedItem() + "");
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+            for (Habitacion h : lstHabitaciones) {
+                nombreHabitaciones.add(h.getNOMBRE());
+            }
+
+            spinHabitacion.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, nombreHabitaciones));
+
+            spinHabitacion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    LogicSeleccion.espacios(spinHabitacion.getSelectedItem() + "");
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+            for (Espacio e : lstEspacios) {
+                nombreEspacios.add(e.getNOMBRE());
+            }
+
+            spinEspacio.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, nombreEspacios));
+
+            spinEspacio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+
+        }else{
+            Toast.makeText(getApplicationContext(), R.string.toast_user_vacio, Toast.LENGTH_SHORT).show();
         }
-
-        spinVivienda.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, nombreViviendas));
-
-        spinVivienda.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                LogicSeleccion.habitaciones(spinVivienda.getSelectedItem()+"");
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        for(Habitacion h : lstHabitaciones){
-            nombreHabitaciones.add(h.getNOMBRE());
-        }
-
-        spinHabitacion.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, nombreHabitaciones));
-
-        spinHabitacion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                LogicSeleccion.espacios(spinHabitacion.getSelectedItem()+"");
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        for(Espacio e : lstEspacios){
-            nombreEspacios.add(e.getNOMBRE());
-        }
-
-        spinEspacio.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, nombreEspacios));
-
-        spinEspacio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
         btnSiguiente.setOnClickListener(v -> {
             MainActivity.desactivarSonido(sonidoBoton);

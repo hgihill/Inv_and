@@ -38,4 +38,5 @@
     <string name="volumen">Volumen</string>
     <string name="vol_fallo">Volumen de fallo</string>
     <string name="boton">Botón</string>
+    <string name="toast_user_vacio">El usuario no tiene viviendas asociadas, puede insertarlas en la aplicacion de escritorio</string>
 </resources>
